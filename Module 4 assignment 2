@@ -1,0 +1,45 @@
+1.Write a program that prints the integers from 1 to 100. But for multiples of three print "Fizz" instead of the number, and for the multiples of five print "Buzz". For numbers which are multiples of both three and five print "FizzBuzz".
+for i in range(1,101):
+    if i % 3 == 0 and i % 5 == 0:
+        print("fizzbuzz")
+        continue
+    elif i % 3 == 0:
+        print("fizz")
+        continue
+    elif i % 5 == 0:
+        print("buzz")
+        continue
+    print(i)
+
+2.Write a Python program to remove consecutive duplicates from list.
+from itertools import groupby
+x = [2,3,4,5,5,5,6,7,7,8,9]
+print([i[0] for i in groupby(x)])
+
+3.Write a python program to find unique element from a list.
+def unique(list1): 
+    uniquelist =[] 
+    for x in list1: 
+        if x not in uniquelist: 
+            uniquelist.append(x) 
+    for x in uniquelist: 
+        print(x)
+list1 = [10, 20, 10, 30, 40, 40] 
+print("the unique values from 1st list is") 
+unique(list1)
+
+4.Write a function that checks whether a number is in a given range (inclusive of high and low).
+def testrange(n):
+    if n in range(3,9):
+        print( " %s is in the range"%str(n))
+    else :
+        print("The number is outside the given range.")
+n=int(input("enter the number:"))
+testrange(n)
+
+5.Write a Python function that accepts a string and calculates the number of upper case letters and lower case letters. Sample String : 'Hello Mr. Rogers, how are you this fine Tuesday?' Expected Output : No. of Upper case characters : 4 No. of Lower case Characters : 33 HINT: Two string methods that might prove useful .isupper() and.islower().
+def uplow(s):      
+    u = sum(1 for i in s if i.isupper())
+    l = sum(1 for i in s if i.islower())
+    print( "No. of Upper case characters : %s,No. of Lower case characters : %s" % (u,l))
+uplow("Hello Mr. Rogers, how are you this fine Tuesday?")
